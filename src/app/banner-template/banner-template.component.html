@@ -1,7 +1,6 @@
 
 <div class="row">
     <div class="column column-20">
-        
         <div class="panel-container">
             <button class="button button-prime button-outline" style="width: 100%;" 
                 (click)="addNews()"
@@ -10,14 +9,17 @@
                 (click)="addSpecial()"            
             >special</button>
             <button class="button button-prime button-outline" style="width: 100%;"
-            
+                (click)="addMedia()"
             >media</button>
-            <button class="button button-prime button-outline" style="width: 100%;" >twoCol</button>
-            <button class="button button-prime button-outline" style="width: 100%;" >fullBg</button>
-            <button class="button button-prime button-outline" style="width: 100%;" >default</button>
+            <button class="button button-prime button-outline" style="width: 100%;" 
+            (click)="addTwoCol()">twoCol</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+            (click)="addFullBg()">fullBg</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+            (click)="addDefault()"
+            >default</button>
         </div>
     </div>
-
     <div class="column column-80">
         <ng-container *ngFor="let banner of bannerList">
             <ng-container *ngTemplateOutlet='banner.template,context:banner'></ng-container>
@@ -27,25 +29,25 @@
 
 
 <ng-template #news let-banner="ctx">
-    <app-banner-news></app-banner-news>
+    <app-banner-news [banner]="banner"></app-banner-news>
 </ng-template>
 
 <ng-template #special let-banner="ctx">
-    <app-banner-special></app-banner-special>
+    <app-banner-special [banner]="banner"></app-banner-special>
 </ng-template>
 
 <ng-template #media let-banner="ctx">
-    <app-banner-media></app-banner-media>
+    <app-banner-media [banner]="banner"></app-banner-media>
 </ng-template>
 
 <ng-template #twoCol let-banner="ctx">
-    <app-banner-two-col></app-banner-two-col>
+    <app-banner-two-col [banner]="banner"></app-banner-two-col>
 </ng-template>
 
 <ng-template #fullBg let-banner="ctx">
-    <app-banner-full-bg></app-banner-full-bg>
+    <app-banner-full-bg [banner]="banner"></app-banner-full-bg>
 </ng-template>
 
 <ng-template #default let-banner="ctx">
-    <app-banner-default></app-banner-default>
+    <app-banner-default [banner]="banner"></app-banner-default>
 </ng-template>

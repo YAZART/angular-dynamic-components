@@ -49,6 +49,30 @@ export class BannerTemplateComponent implements OnInit, AfterViewInit {
             ctx: this.fabric.createSpecial()
         });
     }
+    addMedia(){
+        this.bannerList.push({
+            template: this.tmpl['media'],
+            ctx: this.fabric.createMedia()
+        });
+    }
+    addTwoCol(){
+        this.bannerList.push({
+            template: this.tmpl['twoCol'],
+            ctx: this.fabric.createTwoCol()
+        });
+    }
+    addFullBg(){
+        this.bannerList.push({
+            template: this.tmpl['fullBg'],
+            ctx: this.fabric.createFullBg()
+        });
+    }
+    addDefault(){
+        this.bannerList.push({
+            template: this.tmpl['default'],
+            ctx: this.fabric.createDefault()
+        });
+    }
 
     ngOnInit() { }
 }
