@@ -1,0 +1,51 @@
+
+<div class="row">
+    <div class="column column-20">
+        
+        <div class="panel-container">
+            <button class="button button-prime button-outline" style="width: 100%;" 
+                (click)="addNews()"
+            >news</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addSpecial()"            
+            >special</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+            
+            >media</button>
+            <button class="button button-prime button-outline" style="width: 100%;" >twoCol</button>
+            <button class="button button-prime button-outline" style="width: 100%;" >fullBg</button>
+            <button class="button button-prime button-outline" style="width: 100%;" >default</button>
+        </div>
+    </div>
+
+    <div class="column column-80">
+        <ng-container *ngFor="let banner of bannerList">
+            <ng-container *ngTemplateOutlet='banner.template,context:banner'></ng-container>
+        </ng-container>
+    </div>
+</div>
+
+
+<ng-template #news let-banner="ctx">
+    
+</ng-template>
+
+<ng-template #special let-banner="ctx">
+    
+</ng-template>
+
+<ng-template #media let-banner="ctx">
+
+</ng-template>
+
+<ng-template #twoCol let-banner="ctx">
+
+</ng-template>
+
+<ng-template #fullBg let-banner="ctx">
+ 
+</ng-template>
+
+<ng-template #default let-banner="ctx">
+
+</ng-template>

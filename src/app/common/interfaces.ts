@@ -20,5 +20,6 @@ export interface IBanner{
     type: BannerTypeSet;
     subheader?: string;
     textBlock?: IBannerTextBlock[];
+    specBlock?: IBannerTextBlock[];
     buttons?: IBannerButtons[];
 }

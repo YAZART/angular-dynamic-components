@@ -1,0 +1,24 @@
+.divider{
+    display: block;
+    width: 80%;
+    border-top: 1px solid #E6E9EF;
+    margin-left: 10%;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.panel-container{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding-right: 16px;
+    &:before{
+        position: absolute;
+        display: block;
+        content: ' ';
+        height: 80%;
+        top: 10%;
+        right: 0;
+        border-right: 1px solid #E6E9EF;
+    }   
+}
