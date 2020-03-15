@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "angular-dynamic-components": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-dynamic-components"
+    }
+  },
+  "defaultProject": "angular-dynamic-components",
+  "cli": {
+    "analytics": "98ca0f78-9b1e-4230-8954-552026203e67"
+  }
 }
