@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="column column-20">
+        <div class="panel-container">
+            <button class="button button-prime button-outline" style="width: 100%;" (click)="addNews()">news</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addSpecial()">special</button>
+            <button class="button button-prime button-outline" style="width: 100%;" (click)="addMedia()">media</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addTwoCol()">twoCol</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addFullBg()">fullBg</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addDefault()">default</button>
+        </div>
+    </div>
+    <div class="column column-80">
+        <ng-container #container></ng-container>
+    </div>
+</div>

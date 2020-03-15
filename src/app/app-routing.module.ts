@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'template', loadChildren: () => import('./banner-template/banner-template.module').then(m => m.BannerTemplateModule)},
   {path:'resolver', loadChildren: () => import('./banner-resolver/banner-resolver.module').then(m => m.BannerResolverModule)},
   {path:'outlet', loadChildren: () => import('./banner-outlet/banner-outlet.module').then(m => m.BannerOutletModule)},
-  // {path:'render', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule)}
+  {path:'render', loadChildren: () => import('./banner-render/banner-render.module').then(m => m.BannerRenderModule)}
 ];
 
 @NgModule({
