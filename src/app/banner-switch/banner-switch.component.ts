@@ -7,12 +7,18 @@ import { IBanner, BannerTypeSet } from '../common/interfaces';
 })
 
 export class BannerSwitchComponent implements OnInit {
-    @Input() banner: IBanner;
+    banner: IBanner = {
+        header: 'Мой баннер',
+        type: BannerTypeSet.MEDIA
+    };
     enums = { 
-        BannerTypeSet: BannerTypeSet
+        types: BannerTypeSet
     };
     
-    constructor() { }
+    constructor() {
+
+        
+    }
 
     ngOnInit() { }
 }

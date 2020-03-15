@@ -1,7 +1,29 @@
 <ng-container>
+<!--     NEWS = 1,
+    SPECIAL = 2,
+    MEDIA = 3,
+    TWO_COL = 4,
+    FULLBG=5,
+    UNDEFINED = 255 -->
     <div [ngSwitch]="banner.type">
-        <div *ngSwitchCase="enums.BannerTypeSet.NEWS">output</div>
-        <div *ngSwitchDefault>output2</div>
+        <div *ngSwitchCase="enums.types.NEWS">
+            новости
+        </div>
+        <div *ngSwitchCase="enums.types.SPECIAL">
+            специальное предложение
+        </div>
+        <div *ngSwitchCase="enums.types.MEDIA">
+            медиа
+        </div>
+        <div *ngSwitchCase="enums.types.TWO_COL">
+            две колонки
+        </div>
+        <div *ngSwitchCase="enums.types.UNDEFINED">
+            остальные
+        </div>
+        <div *ngSwitchDefault>
+            остальные
+        </div>
     </div>
 
 </ng-container>
