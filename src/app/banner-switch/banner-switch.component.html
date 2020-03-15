@@ -1,29 +1,40 @@
-<ng-container>
-<!--     NEWS = 1,
-    SPECIAL = 2,
-    MEDIA = 3,
-    TWO_COL = 4,
-    FULLBG=5,
-    UNDEFINED = 255 -->
-    <div [ngSwitch]="banner.type">
-        <div *ngSwitchCase="enums.types.NEWS">
-            новости
-        </div>
-        <div *ngSwitchCase="enums.types.SPECIAL">
-            специальное предложение
-        </div>
-        <div *ngSwitchCase="enums.types.MEDIA">
-            медиа
-        </div>
-        <div *ngSwitchCase="enums.types.TWO_COL">
-            две колонки
-        </div>
-        <div *ngSwitchCase="enums.types.UNDEFINED">
-            остальные
-        </div>
-        <div *ngSwitchDefault>
-            остальные
+<div class="row">
+    <div class="column column-20">
+        <div class="panel-container">
+            <button class="button button-prime button-outline" style="width: 100%;" (click)="addNews()">news</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addSpecial()">special</button>
+            <button class="button button-prime button-outline" style="width: 100%;" (click)="addMedia()">media</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addTwoCol()">twoCol</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addFullBg()">fullBg</button>
+            <button class="button button-prime button-outline" style="width: 100%;"
+                (click)="addDefault()">default</button>
         </div>
     </div>
-
-</ng-container>
+    <div class="column column-80">
+        <ng-container *ngFor="let banner of bannerList">
+            <div [ngSwitch]="banner.type">
+                <div *ngSwitchCase="enums.types.NEWS">
+                    <app-banner-news [banner]="banner"></app-banner-news>
+                </div>
+                <div *ngSwitchCase="enums.types.SPECIAL">
+                    <app-banner-special [banner]="banner"></app-banner-special>
+                </div>
+                <div *ngSwitchCase="enums.types.MEDIA">
+                    <app-banner-media [banner]="banner"></app-banner-media>
+                </div>
+                <div *ngSwitchCase="enums.types.TWO_COL">
+                    <app-banner-two-col [banner]="banner"></app-banner-two-col>
+                </div>
+                <div *ngSwitchCase="enums.types.FULLBG">
+                    <app-banner-full-bg [banner]="banner"></app-banner-full-bg>
+                </div>
+                <div *ngSwitchDefault>
+                    <app-banner-default [banner]="banner"></app-banner-default>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
