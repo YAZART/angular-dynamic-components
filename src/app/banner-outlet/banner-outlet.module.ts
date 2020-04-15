@@ -20,14 +20,6 @@ import { BannerNewsComponent } from '../banner-types/banner-news/banner-news.com
     ],
     exports: [BannerOutletComponent],
     declarations: [BannerOutletComponent],
-    providers: [],
-    entryComponents: [
-        BannerNewsComponent,
-        BannerSpecialComponent,
-        BannerFullBgComponent,
-        BannerDefaultComponent,
-        BannerMediaComponent,
-        BannerTwoColComponent
-    ]
+    providers: []
 })
 export class BannerOutletModule { }

@@ -17,7 +17,7 @@
         <ng-container *ngFor="let banner of bannerList">
             <div class="banner">
                 <div class="banner-header" *ngIf="banner.header"></div>
-                <div class="row">
+                <div class="row" *ngIf="banner.textBlock">
                     <div class="column" *ngFor="let item of banner.textBlock">
                         <div class="banner-news"></div>
                     </div>
@@ -27,7 +27,7 @@
                         <div class="banner-news"></div>
                     </div>
                 </div>
-                <div class="banner-footer">
+                <div class="banner-footer" *ngIf="banner.buttons">
                     <div class="row">
                         <div class="column" *ngFor="let btn of banner.buttons">
                             <button class="button button-prime" style="width: 100%;"></button>
